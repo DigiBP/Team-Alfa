@@ -1,5 +1,16 @@
 # Team-Alfa
-# List assumptions:
+
+***
+Authors:   
+Lendrit Malushi
+Sandro Heimann 
+Basil Knobel
+Sandro Eugster
+*** 
+## Table of Content
+
+***
+## List assumptions:
 
 - Clients come in and directly go to the screen
 - To start the consultancy the customer has to slide his &quot;Krankenkassenkarte&quot; into the screen
@@ -11,19 +22,19 @@
 - Drugs in the drug dispenser are always stored and readily available
 
 
-# Introduction
+## Introduction
 
 The team set out to work on the group project number six &quot;Digital pharmacy&quot; and created the fictitious pharmacy called &quot;Happy pharma&quot;. At this point, we would like to give again a special thanks to the FHNW lecturers from the module digitalisation of business processes who supported us with valuable advice during the project phase.
 
 Happy pharma continuously strives to offer its customer the best service as possible. As part of its strategic assessment and outcome, Happy pharma decided to streamline its core process &quot;customer orders drugs&quot;. Thereby, state of the art technology was deployed, and customer feedback was considered to respect the important concept of customer centricity. From a technical perspective, the open-source workflow engine camunda was utilized following BPMN 2.0 methodology. Finally, services such as chatbots, google forms and excel sheets were integrated.
 
-# As is process
+## As is process
 
 The as is process &quot;order drugs&quot; from Happy pharma consists to a great extent of personnel intensive tasks. Except for the warehouse system, there are no digital activities included. The pharmacists still assist in simple customer drug requests having potentially less time for customers with a complex issue.
 
 ![sone kack bild vom as is prozess](images/asis.png?raw=true "Title")
 
-# Assumptions
+## Assumptions
 
 As this is a hypothetical case, several assumptions were made to facilitate such a automation. Some of the assumptions are of technical nature, other assumptions are rather of a general environment basis. These assumptions are made as a way to demonstrate the case later on.
 
@@ -35,7 +46,7 @@ As a security measure, the self-service machine only is able to dispose non-pres
 
 See list of assumptions above
 
-# Tobe process (including description of webservices)
+## To-Be process (including description of webservices)
 
 ![sone kack bild vom to be prozess](images/tobe.png?raw=true "Title")
 
