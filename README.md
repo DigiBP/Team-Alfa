@@ -2,14 +2,12 @@
 
 ***
 Authors:   
-Lendrit Malushi
-Sandro Heimann 
-Basil Knobel
+Lendrit Malushi,
+Sandro Heimann,
+Basil Knobel,
 Sandro Eugster
 *** 
-## Table of Content
 
-***
 ## List assumptions:
 
 - Clients come in and directly go to the screen
