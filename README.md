@@ -21,7 +21,7 @@ Happy pharma continuously strives to offer its customer the best service as poss
 
 The as is process &quot;order drugs&quot; from Happy pharma consists to a great extent of personnel intensive tasks. Except for the warehouse system, there are no digital activities included. The pharmacists still assist in simple customer drug requests having potentially less time for customers with a complex issue.
 
-![sone kack bild fom as is prozess](images/asis.png?raw=true "Title")
+![sone kack bild vom as is prozess](images/asis.png?raw=true "Title")
 
 # Assumptions
 
@@ -35,28 +35,30 @@ As a security measure, the self-service machine only is able to dispose non-pres
 
 See list of assumptions above
 
-Describe with little more detail
-
 # Tobe process (including description of webservices)
 
-![](RackMultipart20211222-4-ye6qge_html_dee86516e906322.png)
+![sone kack bild vom to be prozess](images/tobe.png?raw=true "Title")
 
 The process starts with the customer entering. After entering the health insurance card they are greeted with the screen asking if they want to use the self-service or need personal assistance. If they choose to go with personal assistance the process directly guides them towards the manual task, where they are assisted by a pharmacy assistant or pharmacist.
 
 When it comes to the implementation, the question whether the customer wants to use the self-service and whether he or she has a prescription is asked via a google forms. The information will then be sent to the integration system &quot;Integromat&quot; which then forwards the message to camunda triggering the token to move on. In integromat, we set up a webhook and the http request.
 
-![](RackMultipart20211222-4-ye6qge_html_ba8d9523ec3a4710.png) ![](RackMultipart20211222-4-ye6qge_html_93992afe4b2dcafe.png)
+![sone kack bild vom integromat](images/integromat1.png?raw=true "Title")
 
-![](RackMultipart20211222-4-ye6qge_html_ffabc57fbd1e972f.png) ![](RackMultipart20211222-4-ye6qge_html_9a0ecb7de62e1b37.png)
+
+![sone kack bild vom integromat](images/integromat2.png?raw=true "Title")
+
+![sone kack bild vom integromat](images/integromat3.png?raw=true "Title")
 
 In case they do have a valid prescription, it needs to be scanned and the process continues. If there is an issue with the prescription again a pharmacist helps the clients out. If they choose option &quot;No&quot; for prescription then they are guided towards the next webservice which is a chatbot.
 
-![](RackMultipart20211222-4-ye6qge_html_a5e8de64abf84ff1.png) ![](RackMultipart20211222-4-ye6qge_html_8a2803bad09a6ff8.png) ![](RackMultipart20211222-4-ye6qge_html_5be4434bd649d8e4.png)
 
-_Figure 2 - webservice order_
-
-_Figure 1 - webservice payment_
+![sone kack bild vom integromat](images/chatbot.png?raw=true "Title")
 
 From then on, the chat bot asks the client what kind of drug and how much of the drug is needed. The bot was set up with one entity and three intents. The entity drugs was configured as a manual list at the end. The final intent will call a webhook, which was implemented in the Integromat framework (see picture below). If the client choses a Non-Prescription drug the process continues and the user is able to confirm and pay the order as required. If they choose a prescription drug then the order needs to be fulfilled by a trained pharmacist, as it needs their validation regarding the prescription drug. Now if a client would indicate in the first instance, that they do not need a prescription drug, but then order a prescription drug over the chatbot, it would be detected, as there is ether no prescription document uploaded to the system and as the integromat workflow will reorganize it. All drugs who are sold in the fully automated bot are stored in a database, here in form as a excel sheet. The database has all the necessary master data in it, for example the mandatory for the prescription, yes / no. Therefore, customer safety and drug abuse is given with no excuse. The order is then confirmed and payment is ensured either through the health insurer, or via the payment webinterface. This information is then further distributed to the google sheet with the rest of the order information. As part of the integromat workflow data, like an order id and order datetime will be collected and stored in the google sheet what is representing a database for reporting and auditing reasons. The Integromat workflow in the end will respond with a web request to the camunda engine with all variables included. Lateron in the process steps a payment service webhook will be trigged with a listener in the camunda model. The workflow will then make a web request to a service task in the camunda enginge, update the specific data in the google sheet and cofirm back to the camunda engine.
+
+![sone kack bild vom integromat](images/integromat4.png?raw=true "Title")
+
+![sone kack bild vom integromat](images/integromat5.png?raw=true "Title")
 
 Compared to the As-Is process, the new process offers a lot of advantages. The pharmacy will be able to function more efficiently, moreover the data that is being collected on the self-service machine will help in planning of stock and analysing trends in different seasons. Furthermore, the staff is able to really help people that are in need of advisory and not just the clients that exactly know what they want to buy.
