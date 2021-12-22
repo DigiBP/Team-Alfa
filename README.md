@@ -43,7 +43,7 @@ The process starts with the customer entering. After entering the health insuran
 
 When it comes to the implementation, the question whether the customer wants to use the self-service and whether he or she has a prescription is asked via a google forms. The information will then be sent to the integration system &quot;Integromat&quot; which then forwards the message to camunda triggering the token to move on. In integromat, we set up a webhook and the http request.
 
-![sone kack bild vom integromat](images/integromat1.png?raw=true "Title")
+![sone kack bild vom integromat](images/integromat.png?raw=true "Title")
 
 
 ![sone kack bild vom integromat](images/integromat2.png?raw=true "Title")
