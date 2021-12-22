@@ -21,7 +21,7 @@ Happy pharma continuously strives to offer its customer the best service as poss
 
 The as is process &quot;order drugs&quot; from Happy pharma consists to a great extent of personnel intensive tasks. Except for the warehouse system, there are no digital activities included. The pharmacists still assist in simple customer drug requests having potentially less time for customers with a complex issue.
 
-![](RackMultipart20211222-4-ye6qge_html_3cffc86aa5e47a0.png)
+![sone kack bild fom as is prozess](images/asis.png?raw=true "Title")
 
 # Assumptions
 
